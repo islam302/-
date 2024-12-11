@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamed Badran</title>
     <style>
-        /* تنسيق عام */
+        /* General Styling */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -13,10 +13,10 @@
             background: url('d.png') no-repeat center center fixed;
             background-size: cover;
             color: #333;
-            direction: rtl; /* تغيير الاتجاه إلى اليمين */
+            direction: rtl; /* Change direction to right-to-left */
         }
 
-        /* قسم الرأس */
+        /* Header Section */
         header {
             text-align: center;
             color: white;
@@ -33,24 +33,23 @@
             margin: 10px 0;
         }
 
-        /* قسم المحتوى */
+        /* Content Section */
         .container {
-            max-width: 900px;
-            margin: 200px auto; /* زيادة المسافة من الأعلى */
-            background: rgba(255, 255, 255, 0.9); /* خلفية شفافة */
+            max-width: 90%; /* Adjust width for responsiveness */
+            margin: 150px auto; /* Adjust margin for spacing */
+            background: rgba(255, 255, 255, 0.9); /* Transparent background */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-
-        /* قسم الملف الشخصي */
+        /* Profile Section */
         .profile {
             text-align: center;
         }
 
         .profile img {
-            width: 180px;
+            width: 150px; /* Adjust width for responsiveness */
             border-radius: 50%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
@@ -66,15 +65,16 @@
             color: #666;
         }
 
-        /* قسم الأيقونات */
+        /* Icons Section */
         .icons {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
             margin: 20px 0;
         }
 
         .icons a {
-            margin: 0 15px;
+            margin: 10px; /* Adjust margin for spacing */
             text-decoration: none;
             transition: transform 0.3s;
         }
@@ -84,11 +84,11 @@
         }
 
         .icons img {
-            width: 50px;
-            height: 50px;
+            width: 40px; /* Smaller icons for responsiveness */
+            height: 40px;
         }
 
-        /* قسم التعريف والفيديو */
+        /* About Section and Video */
         h2 {
             margin-top: 30px;
             font-size: 1.8rem;
@@ -103,21 +103,17 @@
             font-size: 1rem;
             color: #0c0c0c;
         }
-        h3 {
-            line-height: 1.6;
-            font-size: 1rem;
-            color: #ffffff;
-        }
 
         iframe {
-            width: 100%;
-            height: 500px;
+            width: 100%; /* Full-width video */
+            height: auto;
+            aspect-ratio: 16/9; /* Maintain aspect ratio */
             margin: 20px 0;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* قسم التذييل */
+        /* Footer Section */
         footer {
             text-align: center;
             padding: 15px;
@@ -135,10 +131,65 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem; /* Smaller font size for smaller screens */
+            }
+
+            header h3 {
+                font-size: 1rem;
+            }
+
+            .profile img {
+                width: 120px; /* Smaller profile image */
+            }
+
+            .container {
+                margin: 100px auto; /* Adjust margin for smaller screens */
+            }
+
+            .icons img {
+                width: 35px;
+                height: 35px;
+            }
+
+            h2 {
+                font-size: 1.5rem; /* Smaller headings */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            header h3 {
+                font-size: 0.9rem;
+            }
+
+            .profile img {
+                width: 100px; /* Even smaller profile image */
+            }
+
+            .icons img {
+                width: 30px;
+                height: 30px;
+            }
+
+            h2 {
+                font-size: 1.2rem; /* Smaller headings for mobile */
+            }
+
+            .container {
+                margin: 50px auto;
+                padding: 15px; /* Less padding for smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
-
 <div class="container">
     <div class="profile">
         <img src="./mohamed-badran.jpg" alt="صورة المدرس">
@@ -161,6 +212,5 @@
     <h2>فيديو تعريفي</h2>
     <iframe style="border:0;" scrolling="no" src="https://go.screenpal.com/player/cZl6q0nnwAz?title=0&controls=1&share=1&download=1&embed=1&cl=1&width=1280&height=720&overlays=1&ff=1" allowfullscreen="true"></iframe>
 </div>
-
 </body>
 </html>
